@@ -5,17 +5,47 @@
 <title>index</title>
 <link href="landing.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.typekit.net/vos4vji.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<script language="javascript">	
+		$(document).ready(function(){
+			var elementSignIn = document.getElementById("signInButton"); 
+			var elementSignUp = document.getElementById("signUpButton"); 
+			elementSignIn.onclick = function(){
+				$('#home').css("visibility", "hidden")
+				$('#signIn').css("visibility", "visible")
+			}
+			elementSignIn.onclick = function(){
+				$('#home').css("visibility", "hidden")
+				$('#signUp').css("visibility", "visible")
+			}
+		})
+	</script>
+	
 </head>
 
 	
 	
 <body>
+	
 	<div class="partContainer">
 		<span class="dot"></span>
 		<div class="rightBox">
-			<div class="button" style="left: 22px; bottom: 20px;">sign in</div>
-			<div class="button" style="right: 22px; bottom: 20px;">sign up</div>
-			<div class="blurb"> An educational webapp that lets you journal what the moon looks like every night</div>
+			
+			<div class="home" id="home">
+				<div class="button" id="signInButton" style="left: 22px; bottom: 20px;">sign in</div>
+				<div class="button" id="signUpButton" style="right: 22px; bottom: 20px;">sign up</div>
+				<div class="blurb"> An educational webapp that lets you journal what the moon looks like every night</div>
+			</div>
+			
+			<div class="signIn" id="signIn">
+				
+			</div>
+			
+			<div class="signUp" id="signUp">
+				
+			</div>
+			
 		</div>
 		<div class="topBox">
 			<h1 class="shadow">Earthshine</h1>
