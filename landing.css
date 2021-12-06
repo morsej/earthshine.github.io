@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+}
+
+h1{
+	font-size: 15px;
+	font-family: manofa, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	position: relative;
+	top: -100px;
+	left: 10px;
+}
+
+.button{
+	height: 50px;
+	width: 170px;
+	border-radius: 25px;
+	font-size: 35px;
+	text-align: center;
+	background-color: #9C2F2F;
+	position: absolute;
+}
+
+.fieldLabel{
+	
+}
+
+.field{
+	height: 50px;
+	width: calc(90% - 20px);
+	border-radius: 3px;
+	font-size: 35px;
+	padding-left: 20px;
+	border: 2px solid #9C2F2F;
+	left: 5%;
+	position: absolute;
+	top: 200px;
+	margin: auto;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.blurb{
+	position: absolute;
+	top: 100px;
+	margin: 20px;
+}
+
+.shadow{
+	text-shadow: 1px 1px 0 #ffd000, 
+	  2px 2px 0 #ffd000,
+	  3px 3px #ffd000, 
+	  4px 4px 0 #ffd000,
+	  5px 5px 0 #ffd000,
+	  6px 6px #ffd000,
+	  7px 7px 0 #ffd000,
+	  8px 8px #ffd000, 
+	  9px 9px 0 #ffd000,
+	  10px 10px 0 #ffd000,
+	  11px 11px #ffd000;
+	color: #ff9400;
+	letter-spacing: 0.4rem;
+	font-size: 100px;
+}
+
+.partContainer{
+	margin: auto;
+	width: 900px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.dot{
+	height: 400px;
+	width: 400px;
+	background-color: #9C2F2F;
+	display: inline-block;
+	border-radius: 50%;
+	top: 40px;
+	position: relative;
+}
+.rightBox{
+	height: 440px;
+	width: 450px;
+	background-color: #681010;
+	display: fixed;
+	border-radius: 25px;
+	right: 0px;
+	position: absolute;
+	top: 20px;
+}
+.topBox{
+	height: 120px;
+	width: 680px;
+	background-color: #681010;
+	display: fixed;
+	border-radius: 25px;
+	font-size: 15px;
+	right: 0px;
+	top: 20px;
+	position: absolute;
+}
