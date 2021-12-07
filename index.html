@@ -47,16 +47,16 @@
 <body>
 	
 	<div class="partContainer">
-		<span class="dot"></span>
+		<div class="dotbox"><span class="dot"></span></div>
 		<div class="rightBox">
 			
-			<div class="home" id="home" style="visibility: visible;">
+			<div class="home" id="home" style="visibility: hidden;">
 				<div class="button" id="signInButton" style="left: 22px; bottom: 20px;">sign in</div>
 				<div class="button" id="signUpButton" style="right: 22px; bottom: 20px;">sign up</div>
 				<div class="blurb"> An educational webapp that lets you journal what the moon looks like every night</div>
 			</div>
 			
-			<div class="signIn" id="signIn" style="visibility: hidden;">
+			<div class="signIn" id="signIn" style="visibility: visible;">
 				<div class="spacing"></div>
 				<form action="/action_page.php">
 					<label for="username">Username</label>
@@ -73,7 +73,7 @@
 				</div>
 			</div>
 			
-			<div class="signUp" id="signUp" style="visibility: hidden;">
+			<div class="signUp" id="signUp" style="visibility: visible;">
 				<form action="/action_page.php">
 					<label for="newUsername">Username</label>
 					<input type="text" id="newUsername" name="newUsername" placeholder="choose your username">

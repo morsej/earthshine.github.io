@@ -123,8 +123,8 @@ input[type=text]{
 }
 
 .dot{
-	height: 400px;
-	width: 400px;
+	height: 380px;
+	width: 380px;
 	background-color: #9C2F2F;
 	display: inline-block;
 	border-radius: 50%;
@@ -182,12 +182,12 @@ input[type=text]{
 	
 	.swap{
 		color: #725B5B;
-		font-size: 20px;
+		font-size: 15px;
 		margin: auto;
 		text-align: center;
 		position: absolute;
 		width: 300px;
-		bottom: -68px;
+		bottom: -75px;
 	}
 	
 	body{
@@ -197,9 +197,15 @@ input[type=text]{
 		font-size: 30px;
 	}
 	
+	.dotbox{
+		width: 230px;
+		position: relative;
+		margin: auto;
+	}
+	
 	.dot{
-		height: 280px;
-		width: 280px;
+		height: 230px;
+		width: 230px;
 		background-color: #9C2F2F;
 		display: inline-block;
 		border-radius: 50%;
@@ -220,7 +226,7 @@ input[type=text]{
 	}
 
 	.spacing{
-		height: 70px;
+		height: 76px;
 	}
 	
 	.blurb{
@@ -256,20 +262,37 @@ input[type=text]{
 	
 	.swap2{
 		color: #725B5B;
-		font-size: 20px;
+		font-size: 15px;
 		margin: auto;
 		text-align: center;
 		position: absolute;
 		width: 300px;
 		bottom: 10px;
-		top: 232px;
+		top: 300px;
+	}
+	
+	input[type=submit]{
+		width: 90%;
+		border: 0px solid #000000;
+		border-radius: 25px;
+		position: relative;
+		margin: auto;
+		left: 5%;
+		height: 50px;
+		text-decoration-color: #000000;
+		background-color: #9C2F2F;
+		font-family: ode, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 35px;
+		top: 34px;
 	}
 	
 	.button{
 		height: 50px;
 		width: 120px;
 		border-radius: 25px;
-		font-size: 35px;
+		font-size: 30px;
 		text-align: center;
 		background-color: #9C2F2F;
 		position: absolute;
