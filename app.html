@@ -7,38 +7,8 @@
 <link rel="stylesheet" href="https://use.typekit.net/vos4vji.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	
-	<script language="javascript">	
-		$(document).ready(function(){
-			var elementSignIn = document.getElementById("signInButton"); 
-			var elementSignUp = document.getElementById("signUpButton");
-			var goToSU = document.getElementById("goToSU");
-			var goToSI = document.getElementById("goToSI");
-			var head = document.getElementById("head");
-			
-			elementSignIn.onclick = function(){
-				$('#home').css("visibility", "hidden")
-				$('#signIn').css("visibility", "visible")
-			}
-			elementSignUp.onclick = function(){
-				$('#home').css("visibility", "hidden")
-				$('#signUp').css("visibility", "visible")
-			}
-			goToSU.onclick = function(){
-				$('#signIn').css("visibility", "hidden")
-				$('#signUp').css("visibility", "visible")
-			}
-			goToSI.onclick = function(){
-				$('#signUp').css("visibility", "hidden")
-				$('#signIn').css("visibility", "visible")
-			}
-			head.onclick = function(){
-				$('#signUp').css("visibility", "hidden")
-				$('#signIn').css("visibility", "hidden")
-				$('#home').css("visibility", "visible")
-			}
-		})
-	</script>
 	
 </head>
 

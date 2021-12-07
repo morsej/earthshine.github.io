@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+}
+
+h1{
+	font-size: 15px;
+	font-family: manofa, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	position: relative;
+	top: -100px;
+	left: 10px;
+}
+
+.button{
+	height: 50px;
+	width: 170px;
+	border-radius: 25px;
+	font-size: 35px;
+	text-align: center;
+	background-color: #9C2F2F;
+	position: absolute;
+	bottom: 120px;
+}
+
+input[type=submit]{
+	width: 90%;
+	border: 0px solid #000000;
+	border-radius: 25px;
+	position: relative;
+	margin: auto;
+	left: 5%;
+	height: 50px;
+	text-decoration-color: #000000;
+	background-color: #9C2F2F;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+	top: 20px;
+}
+
+label{
+	margin-left: 20px;
+	font-size: 28px;
+}
+
+.swap{
+	color: #725B5B;
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	position: absolute;
+	width: 450px;
+	bottom: 10px;
+}
+
+.swap2{
+	color: #725B5B;
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	position: absolute;
+	width: 450px;
+	bottom: 10px;
+	top: 312px;
+}
+
+input[type=text]{
+    width: 90%;
+	padding: 12px 10px;
+	display: inline-block;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	padding-left: 14px;
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	left: 5%;
+	text-decoration-color: #000000;
+	background-color: #9C2F2F;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	top: -5px;
+}
+
+.blurb{
+	position: absolute;
+	top: 100px;
+	margin: 20px;
+}
+
+.shadow{
+	text-shadow: 1px 1px 0 #ffd000, 
+	  2px 2px 0 #ffd000,
+	  3px 3px #ffd000, 
+	  4px 4px 0 #ffd000,
+	  5px 5px 0 #ffd000,
+	  6px 6px #ffd000,
+	  7px 7px 0 #ffd000,
+	  8px 8px #ffd000, 
+	  9px 9px 0 #ffd000,
+	  10px 10px 0 #ffd000,
+	  11px 11px #ffd000;
+	color: #ff9400;
+	letter-spacing: 0.4rem;
+	font-size: 100px;
+}
+
+.partContainer{
+	margin: auto;
+	width: 900px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.dot{
+	height: 400px;
+	width: 400px;
+	background-color: #9C2F2F;
+	display: inline-block;
+	border-radius: 50%;
+	top: 40px;
+	position: relative;
+}
+
+.rightBox{
+	height: 480px;
+	width: 450px;
+	background-color: #681010;
+	display: fixed;
+	border-radius: 25px;
+	right: 0px;
+	position: absolute;
+	top: 20px;
+}
+
+.spacing{
+	height: 110px;
+}
+
+.topBox{
+	height: 120px;
+	width: 680px;
+	background-color: #681010;
+	display: fixed;
+	border-radius: 25px;
+	font-size: 15px;
+	right: 0px;
+	top: 20px;
+	position: absolute;
+}
+
+.signUp{
+	position: relative; 
+	top: -255px;
+}
+
+@media only screen and (max-width: 930px) {
+	.partContainer{
+		width: 300px;
+		position: relative;
+		margin: auto;
+	}
+	
+	.signUp{
+		position: relative; 
+		top: -222px;
+	}
+	.signIn{
+		position: relative; 
+		top: -10px;
+	}
+	
+	.swap{
+		color: #725B5B;
+		font-size: 20px;
+		margin: auto;
+		text-align: center;
+		position: absolute;
+		width: 300px;
+		bottom: -68px;
+	}
+	
+	body{
+		font-family: ode, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 30px;
+	}
+	
+	.dot{
+		height: 280px;
+		width: 280px;
+		background-color: #9C2F2F;
+		display: inline-block;
+		border-radius: 50%;
+		position: relative;
+		margin: auto;
+		top: 1px;
+	}
+
+	.rightBox{
+		height: 360px;
+		width: 300px;
+		background-color: #681010;
+		display: fixed;
+		border-radius: 15px;
+		right: 0px;
+		position: relative;
+		top: 20px;
+	}
+
+	.spacing{
+		height: 70px;
+	}
+	
+	.blurb{
+		position: absolute;
+		top: 50px;
+		margin: 20px;
+	}
+	
+	.topBox{
+		height: 70px;
+		width: 300px;
+		background-color: #4C0909;
+		display: fixed;
+		border-radius: 15px;
+		font-size: 10px;
+		right: 0px;
+		top: -370px;
+		position: relative;
+	}
+	
+	.shadow{
+		text-shadow: 1px 1px 0 #ffd000, 
+		  2px 2px 0 #ffd000,
+		  3px 3px #ffd000, 
+		  4px 4px 0 #ffd000,
+		  5px 5px 0 #ffd000;
+		color: #ff9400;
+		letter-spacing: 0.08rem;
+		font-size: 45px;
+		position: relative;
+		top: -9px;
+	}
+	
+	.swap2{
+		color: #725B5B;
+		font-size: 20px;
+		margin: auto;
+		text-align: center;
+		position: absolute;
+		width: 300px;
+		bottom: 10px;
+		top: 232px;
+	}
+	
+	.button{
+		height: 50px;
+		width: 120px;
+		border-radius: 25px;
+		font-size: 35px;
+		text-align: center;
+		background-color: #9C2F2F;
+		position: absolute;
+		bottom: 120px;
+	}
+}
