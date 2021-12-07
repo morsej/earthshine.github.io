@@ -1,24 +1,33 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>index</title>
-<link href="app.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://use.typekit.net/vos4vji.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link href="app.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/vos4vji.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-	
 	
 <body>
 	
 	<div class="partContainer">
-		<div class="dotbox"><span class="dot"></span></div>
+		<div class="dotbox">
+			<span class="dot"></span>
+			
+			<div class="slidecontainer">
+				<input type="range" min="1" max="100" value="50" class="slider" id="phase">
+				<input type="range" min="1" max="100" value="50" class="slider" id="color">
+				<input type="range" min="1" max="100" value="50" class="slider" id="clouds">
+				<br><br>
+				<div class="button" id="signUpButton">log this moon</div>
+			</div>
+		</div>
+		
 		<div class="rightBox">
 			
 		</div>
+		
 		<div class="topBox" id="head">
 			<h1 class="shadow">Earthshine</h1>
 		</div>
