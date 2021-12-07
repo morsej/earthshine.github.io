@@ -61,6 +61,17 @@ label{
 	bottom: 10px;
 }
 
+.swap2{
+	color: #725B5B;
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	position: absolute;
+	width: 450px;
+	bottom: 10px;
+	top: 312px;
+}
+
 input[type=text]{
     width: 90%;
 	padding: 12px 10px;
@@ -148,11 +159,25 @@ input[type=text]{
 	position: absolute;
 }
 
+.signUp{
+	position: relative; 
+	top: -255px;
+}
+
 @media only screen and (max-width: 930px) {
 	.partContainer{
 		width: 300px;
 		position: relative;
 		margin: auto;
+	}
+	
+	.signUp{
+		position: relative; 
+		top: -222px;
+	}
+	.signIn{
+		position: relative; 
+		top: -10px;
 	}
 	
 	.swap{
@@ -162,7 +187,7 @@ input[type=text]{
 		text-align: center;
 		position: absolute;
 		width: 300px;
-		bottom: 10px;
+		bottom: -68px;
 	}
 	
 	body{
@@ -227,5 +252,27 @@ input[type=text]{
 		font-size: 45px;
 		position: relative;
 		top: -9px;
+	}
+	
+	.swap2{
+		color: #725B5B;
+		font-size: 20px;
+		margin: auto;
+		text-align: center;
+		position: absolute;
+		width: 300px;
+		bottom: 10px;
+		top: 232px;
+	}
+	
+	.button{
+		height: 50px;
+		width: 120px;
+		border-radius: 25px;
+		font-size: 35px;
+		text-align: center;
+		background-color: #9C2F2F;
+		position: absolute;
+		bottom: 120px;
 	}
 }
