@@ -10,14 +10,31 @@
 	<script language="javascript">	
 		$(document).ready(function(){
 			var elementSignIn = document.getElementById("signInButton"); 
-			var elementSignUp = document.getElementById("signUpButton"); 
+			var elementSignUp = document.getElementById("signUpButton");
+			var goToSU = document.getElementById("goToSU");
+			var goToSI = document.getElementById("goToSI");
+			var head = document.getElementById("head");
+			
 			elementSignIn.onclick = function(){
 				$('#home').css("visibility", "hidden")
 				$('#signIn').css("visibility", "visible")
 			}
-			elementSignIn.onclick = function(){
+			elementSignUp.onclick = function(){
 				$('#home').css("visibility", "hidden")
 				$('#signUp').css("visibility", "visible")
+			}
+			goToSU.onclick = function(){
+				$('#signIn').css("visibility", "hidden")
+				$('#signUp').css("visibility", "visible")
+			}
+			goToSI.onclick = function(){
+				$('#signUp').css("visibility", "hidden")
+				$('#signIn').css("visibility", "visible")
+			}
+			head.onclick = function(){
+				$('#signUp').css("visibility", "hidden")
+				$('#signIn').css("visibility", "hidden")
+				$('#home').css("visibility", "visible")
 			}
 		})
 	</script>
@@ -32,22 +49,47 @@
 		<span class="dot"></span>
 		<div class="rightBox">
 			
-			<div class="home" id="home">
+			<div class="home" id="home" style="visibility: visible;">
 				<div class="button" id="signInButton" style="left: 22px; bottom: 20px;">sign in</div>
 				<div class="button" id="signUpButton" style="right: 22px; bottom: 20px;">sign up</div>
 				<div class="blurb"> An educational webapp that lets you journal what the moon looks like every night</div>
 			</div>
 			
-			<div class="signIn" id="signIn">
-				
+			<div class="signIn" id="signIn" style="visibility: hidden;">
+				<div class="spacing"></div>
+				<form action="/action_page.php">
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username" placeholder="enter your username">
+
+					<label for="password">Password</label>
+					<input type="text" id="password" name="password" placeholder="enter your password">
+
+					<input type="submit" value="sign in">
+  				</form>
+				<div class="swap" id="goToSU">
+					dont have an account?<br>
+					<u>get started</u>
+				</div>
 			</div>
 			
-			<div class="signUp" id="signUp">
-				
+			<div class="signUp" id="signUp" style="visibility: hidden; position: relative; top: -255px;">
+				<form action="/action_page.php">
+					<label for="newUsername">Username</label>
+					<input type="text" id="newUsername" name="newUsername" placeholder="choose your username">
+
+					<label for="newPassword">Password</label>
+					<input type="text" id="newPassword" name="newPassword" placeholder="choose your password">
+
+					<input type="submit" value="sign up">
+  				</form>
+				<div class="swap" id="goToSI" style="top: 312px;">
+					already have an account?<br>
+					<u>sign in</u>
+				</div>
 			</div>
 			
 		</div>
-		<div class="topBox">
+		<div class="topBox" id="head">
 			<h1 class="shadow">Earthshine</h1>
 		</div>
 	</div>

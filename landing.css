@@ -26,32 +26,59 @@ h1{
 	text-align: center;
 	background-color: #9C2F2F;
 	position: absolute;
+	bottom: 120px;
 }
 
-.fieldLabel{
-	
-}
-
-.field{
-	height: 50px;
-	width: calc(90% - 20px);
-	border-radius: 3px;
-	font-size: 35px;
-	padding-left: 20px;
-	border: 2px solid #9C2F2F;
-	left: 5%;
-	position: absolute;
-	top: 200px;
+input[type=submit]{
+	width: 90%;
+	border: 0px solid #000000;
+	border-radius: 25px;
+	position: relative;
 	margin: auto;
+	left: 5%;
+	height: 50px;
+	text-decoration-color: #000000;
+	background-color: #9C2F2F;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+	top: 20px;
 }
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+
+label{
+	margin-left: 20px;
+	font-size: 28px;
+}
+
+.swap{
+	color: #725B5B;
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+	position: absolute;
+	width: 450px;
+	bottom: 10px;
+}
+
+input[type=text]{
+    width: 90%;
+	padding: 12px 10px;
+	display: inline-block;
+	border: 1px solid #000000;
+	border-radius: 4px;
+	padding-left: 14px;
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	left: 5%;
+	text-decoration-color: #000000;
+	background-color: #9C2F2F;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	top: -5px;
 }
 
 .blurb{
@@ -93,8 +120,9 @@ input[type=text], select {
 	top: 40px;
 	position: relative;
 }
+
 .rightBox{
-	height: 440px;
+	height: 480px;
 	width: 450px;
 	background-color: #681010;
 	display: fixed;
@@ -103,6 +131,11 @@ input[type=text], select {
 	position: absolute;
 	top: 20px;
 }
+
+.spacing{
+	height: 110px;
+}
+
 .topBox{
 	height: 120px;
 	width: 680px;
