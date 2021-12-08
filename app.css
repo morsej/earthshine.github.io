@@ -76,6 +76,7 @@ td, th {
     text-align: left;
 	padding-left: 6px;
 	padding-right: 6px;
+	font-size: 38px;
 }
 
 table {
@@ -107,9 +108,7 @@ table {
 	padding-top: 4px;
 	width: 100%;
 	text-align: center;
-	
 }
-
 
 .spacing{
 	height: 84px;
@@ -126,7 +125,6 @@ table {
 	top: 20px;
 	position: absolute;
 }
-
 
 .dotbox{
 	width: 380px;
@@ -250,6 +248,7 @@ table {
 		font-size: 45px;
 		position: relative;
 		top: -9px;
+		left: 10px;
 	}
 	
 	.dotbox{
@@ -267,5 +266,32 @@ table {
 		position: relative;
 		margin: auto;
 		top: 1px;
+	}
+	
+	.spacing{
+		height: 76px;
+	}
+	
+	.box{
+		height: 246px;
+		overflow: scroll;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.api{
+		color: #959595;
+		font-size: 21px;
+		padding-top: 2px;
+		width: 100%;
+		text-align: center;
+	}
+	
+	td, th {
+		border: 2px solid #4C0909;
+		text-align: left;
+		padding-left: 6px;
+		padding-right: 6px;
+		font-size: 21px;
 	}
 }
