@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+:root {
+  --base: #A0366E;
+}
+
 body{
 	font-family: ode, sans-serif;
 	font-weight: 400;
@@ -122,10 +126,8 @@ input[type=text]{
 .dot{
 	height: 380px;
 	width: 380px;
-  	background-image: linear-gradient(#F61E61 , #D0D5F7);
 	display: inline-block;
-	border-radius: 50%;
-	top: 40px;
+	top: 20px;
 	position: relative;
 }
 
@@ -159,6 +161,13 @@ input[type=text]{
 .signUp{
 	position: relative; 
 	top: -255px;
+}
+
+.scaleMoon{
+	transform: scale(2.0);
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 @media only screen and (max-width: 930px) {
@@ -203,11 +212,11 @@ input[type=text]{
 	.dot{
 		height: 230px;
 		width: 230px;
-		background-color: #AEC6CF;
+		background-color: #D4F0F7;
 		display: inline-block;
 		border-radius: 50%;
-		position: relative;
 		margin: auto;
+		left: calc(50% - 115px);
 		top: 1px;
 	}
 
@@ -230,6 +239,14 @@ input[type=text]{
 		position: absolute;
 		top: 50px;
 		margin: 20px;
+	}
+	
+	.scaleMoon{
+		transform: scale(1.2);
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		position: relative;
 	}
 	
 	.topBox{
@@ -295,4 +312,191 @@ input[type=text]{
 		position: absolute;
 		bottom: 120px;
 	}
+}
+
+
+
+
+/*animation*/
+
+
+
+
+.moon {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  -webkit-clip-path: circle(50px at center);
+  clip-path: circle(50px, 50px, 50px);
+  clip-path: circle(49px at center);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: var(--base);
+  overflow: hidden;
+  transform: scale(2);
+}
+
+
+.moon:before, .moon:after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -4%;
+  left: -4%;
+  height: 108%;
+  width: 108%;
+}
+.moon:before {
+  background: #1F456E;
+  -moz-box-shadow: inset -10px 0 7px 0px var(--base);
+  -webkit-box-shadow: inset -10px 0 7px 0px var(--base);
+  box-shadow: inset -10px 0 7px 0px var(--base);
+}
+.moon:after {
+  background: var(--base);
+  -moz-box-shadow: inset -10px 0 7px 0px var(--base);
+  -webkit-box-shadow: inset -10px 0 7px 0px var(--base);
+  box-shadow: inset -10px 0 7px 0px var(--base);
+}
+
+/* Animation */
+@keyframes before-fullmoon {
+	
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+  0%, 24.99% {
+    background: #1F456E;
+  }
+  25%, 100% {
+    background: var(--base);
+  }
+  0% {
+    -moz-box-shadow: inset 0px 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 0px 0 7px 0px var(--base);
+    box-shadow: inset 0px 0 7px 0px var(--base);
+  }
+  24.99% {
+    -moz-box-shadow: inset 55px 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 55px 0 7px 0px var(--base);
+    box-shadow: inset 55px 0 7px 0px var(--base);
+  }
+  25% {
+    -moz-box-shadow: inset 55px 0 7px 0px #1F456E;
+    -webkit-box-shadow: inset 55px 0 7px 0px #1F456E;
+    box-shadow: inset 55px 0 7px 0px #1F456E;
+  }
+  50%, 100% {
+    -moz-box-shadow: inset 0 0 7px 0px #1F456E;
+    -webkit-box-shadow: inset 0 0 7px 0px #1F456E;
+    box-shadow: inset 0 0 7px 0px #1F456E;
+  }
+  0%, 50%, 100% {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  20%, 30% {
+    -moz-border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+    -webkit-border-radius: 10%;
+    border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+  }
+  25% {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  0%, 24.99% {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  25%, 50%, 100% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes after-fullmoon {
+  0%, 50% {
+    opacity: 0;
+  }
+  50.01%, 100% {
+    opacity: 1;
+  }
+  0%, 50%, 74.99% {
+    background: var(--base);
+  }
+  75%, 100% {
+    background: #1F456E;
+  }
+  0%, 50% {
+    -moz-box-shadow: inset 0px 0 7px 0px #1F456E;
+    -webkit-box-shadow: inset 0px 0 7px 0px #1F456E;
+    box-shadow: inset 0px 0 7px 0px #1F456E;
+  }
+  74.99% {
+    -moz-box-shadow: inset 55px 0 7px 0px #1F456E;
+    -webkit-box-shadow: inset 55px 0 7px 0px #1F456E;
+    box-shadow: inset 55px 0 7px 0px #1F456E;
+  }
+  75% {
+    -moz-box-shadow: inset 55px 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 55px 0 7px 0px var(--base);
+    box-shadow: inset 55px 0 7px 0px var(--base);
+  }
+  100% {
+    -moz-box-shadow: inset 0 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 0 0 7px 0px var(--base);
+    box-shadow: inset 0 0 7px 0px var(--base);
+  }
+  0%, 50%, 100% {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  70%, 80% {
+    -moz-border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+    -webkit-border-radius: 10%;
+    border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+  }
+  75% {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  0%, 50%, 74.99% {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  75%, 100% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.moon:before {
+  -moz-animation: before-fullmoon linear 15s infinite;
+  -webkit-animation: before-fullmoon linear 15s infinite;
+  animation: before-fullmoon linear 15s infinite;
+
+}
+
+.moon:after {
+  -moz-animation: after-fullmoon linear 15s infinite;
+  -webkit-animation: after-fullmoon linear 15s infinite;
+  animation: after-fullmoon linear 15s infinite;
+
 }
