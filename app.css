@@ -55,7 +55,7 @@ h1{
 .dot{
 	height: 380px;
 	width: 380px;
-  background-image: linear-gradient(#F61E61 , #D0D5F7);
+    background-image: linear-gradient(#F61E61 , #D0D5F7);
 	display: inline-block;
 	border-radius: 50%;
 	top: 20px;
@@ -65,7 +65,7 @@ h1{
 .smalldot{
 	height: 27px;
 	width: 27px;
-	background-color: #D4F0F7;
+	background-image: linear-gradient(#F61E61 , #D0D5F7);
 	display: inline-block;
 	border-radius: 50%;
 	position: relative;
@@ -173,16 +173,37 @@ table {
   cursor: pointer;
 }
 
+input[type=text]{
+    width: 48%;
+	padding: 4px 2px;
+	display: inline-block;
+	border: 0px solid #1F456E;
+	border-radius: 3px;
+	padding-left: 8px;
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	left: 1%;
+	text-decoration-color: #1F456E;
+	background-color: #AEC6CF;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+}
+
 .button{
 	height: 40px;
 	width: 220px;
-	border-radius: 25px;
-	font-size: 30px;
+	border-radius: 20px;
+	font-size: 25px;
 	text-align: center;
-	margin: auto;
+	left: calc(50% - 110px);
 	background-color: #AEC6CF;
 	position: relative;
 	top: -22px;
+	font-family: ode, sans-serif;
+	border: 0px;
 }
 
 @media only screen and (max-width: 930px) {
