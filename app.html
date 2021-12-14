@@ -71,7 +71,7 @@
    </script>
 </head>
 	
-<body onload= "onload()">
+<body onload= "onload()" onload = "calcRandom()">
 	
 	<div class="partContainer">
 		<div class="dotbox">
@@ -109,7 +109,7 @@
 						<col span="1" style="width: 25%">
 					</colgroup>
 					
-					<tbody>
+					 <tbody>
 						<tr>
 							<td><div class="smalldot"><div class="smallMoon" ></div></div></td>
 							<td>January 13, 2012</td>
@@ -172,7 +172,7 @@
 						</tr>
 					</tbody>
 				</table>
-			</div>
+			</div> 
 			
 			<div class="api" id = "api">	
 				api fun fact!
@@ -190,5 +190,27 @@
 		</div>
 	</div>
 	<br>
+	<script>
+		function calcRandom(){
+			var random = Math.floor(Math.random() * 3); //ADJUST LATER TO 24 
+		}
+		calcRandom();
+		var found = "";
+		
+		var facts =
+			["The Moon is Earth's only natural satellite.", 
+			  "The Moon's presence helps stabilize our planet's wobble and moderate our climate.",
+			  "The Moon’s distance from Earth is about 240,000 miles (385,000km).",
+			  "The Moon has a very thin atmosphere called an exosphere."
+			];
+			for (i=0; i<facts.length; i++){
+				console.log(facts[i]);
+            	if (i == random) {
+            	    found = items[i];
+            	}	
+       		}
+		document.getElementById("moonfact").innerHTML = found;
+
+	</script>
 </body>
 </html>

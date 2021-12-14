@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const { Schema } = mongoose;
 var path = require('path');
+var facts = require('./moonfacts.js');
+console.log(facts.found_fact);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -33,6 +35,8 @@ app.post("/", function(req, res){
         phase: req.body.phase
     })
     newLog.save();
+    // console.log(facts.found_fact);
+    //res.write(facts.found_fact);
     res.redirect('/');
 });
 
