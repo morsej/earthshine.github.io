@@ -48,9 +48,11 @@
 			
 			<div class="slidecontainer" >
 				<form method = "post" action = "/">
-				<input type="range" min="1" max="100" value="50" class="slider" id="phase" name ="phase">
-				<input type="range" min="1" max="100" value="50" class="slider" id="color" name ="color">
-				<input type="range" min="1" max="100" value="50" class="slider" id="clouds" name ="clouds">
+				<div class="controls">
+				    <input type="range" min="0" max="100" value="12" class="slider" id="phase" name ="phase">
+				    <br>
+				    <input type="color" id="base" value="#E274DB">
+				</div>
 				<input type = "text" name = "date" placeholder= "January 1, 2021">
 				<input type = "text" name = "time" placeholder= "1:00AM">
 				<br><br>
@@ -153,5 +155,6 @@
 		</div>
 	</div>
 	<br>
+	<script  src="./changeMoon.js"></script>
 </body>
 </html>
