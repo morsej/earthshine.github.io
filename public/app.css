@@ -1,11 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
 
+:root {
+  --phase: 10s;
+  --base: #E274DB;
+}
+
+
+
 body{
 	font-family: ode, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 40px;
+	background-color: #1C4168;
 }
 
 h1{
@@ -24,19 +32,26 @@ h1{
 	border-radius: 25px;
 	font-size: 35px;
 	text-align: center;
-	background-color: #9C2F2F;
+	background-color: #D4F0F7;
 	position: absolute;
 	bottom: 120px;
 }
 
+.scaleMoon{
+	transform: scale(2.0);
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 .shadow{
-	text-shadow: 1px 1px 0 #ffd000, 
-	  2px 2px 0 #ffd000,
-	  3px 3px 0 #ffd000, 
-	  4px 4px 0 #ffd000,
-	  5px 5px 0 #ffd000,
-	  6px 6px 0 #ffd000;
-	color: #ff9400;
+	text-shadow: 1px 1px 0 #a4c3e5, 
+	  2px 2px 0 #a4c3e5,
+	  3px 3px #a4c3e5, 
+	  4px 4px 0 #a4c3e5,
+	  5px 5px 0 #a4c3e5,
+	  6px 6px #a4c3e5;
+	color: #1C4168;
 	letter-spacing: 0.4rem;
 	font-size: 60px;
 	position: relative;
@@ -54,9 +69,7 @@ h1{
 .dot{
 	height: 380px;
 	width: 380px;
-	background-color: #9C2F2F;
 	display: inline-block;
-	border-radius: 50%;
 	top: 20px;
 	position: relative;
 }
@@ -64,7 +77,7 @@ h1{
 .smalldot{
 	height: 27px;
 	width: 27px;
-	background-color: #9C2F2F;
+	background-image: linear-gradient(#F61E61 , #D0D5F7);
 	display: inline-block;
 	border-radius: 50%;
 	position: relative;
@@ -72,7 +85,7 @@ h1{
 
 
 td, th {
-    border: 2px solid #4C0909;
+    border: 2px solid #AEC6CF;
     text-align: left;
 	padding-left: 6px;
 	padding-right: 6px;
@@ -87,7 +100,7 @@ table {
 .rightBox{
 	height: 580px;
 	width: 450px;
-	background-color: #681010;
+	background-color: #D4F0F7;
 	display: fixed;
 	border-radius: 25px;
 	right: 0px;
@@ -103,7 +116,7 @@ table {
 }
 
 .api,.moonfact{
-	color: #959595;
+	color: #1C4168;
 	font-size: 26px;
 	padding-top: 4px;
 	width: 100%;
@@ -117,7 +130,7 @@ table {
 .topBox{
 	height: 80px;
 	width: 450px;
-	background-color: #4C0909;
+	background-color: #b6e1ec;
 	display: fixed;
 	border-radius: 25px;
 	font-size: 15px;
@@ -140,7 +153,7 @@ table {
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 99%;
   height: 6px;
   border-radius: 3px;
   background: #d3d3d3;
@@ -160,7 +173,7 @@ table {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #9C2F2F;
+  background: #AEC6CF;
   cursor: pointer;
 }
 
@@ -168,24 +181,85 @@ table {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #9C2F2F;
+  background: #AEC6CF;
   cursor: pointer;
+}
+
+input[type=text]{
+    width: 48%;
+	padding: 4px 2px;
+	display: inline-block;
+	border: 0px solid #1C4168;
+	border-radius: 3px;
+	padding-left: 8px;
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	left: 1%;
+	text-decoration-color: #1C4168;
+	background-color: #AEC6CF;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+}
+
+input[type=color]{
+    width: 98%;
+	height: 28px;
+	padding: 0px 2px;
+	display: inline-block;
+	border: 0px solid #1C4168;
+	border-radius: 3px;
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	left: 1%;
+	text-decoration-color: #1C4168;
+	background-color: #AEC6CF;
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
 }
 
 .button{
 	height: 40px;
 	width: 220px;
-	border-radius: 25px;
-	font-size: 30px;
+	border-radius: 20px;
+	font-size: 25px;
 	text-align: center;
-	margin: auto;
-	background-color: #9C2F2F;
+	left: calc(50% - 110px);
+	background-color: #AEC6CF;
 	position: relative;
-	top: -22px;
+	top: -34px;
 	font-family: ode, sans-serif;
+	border: 0px;
 }
 
 @media only screen and (max-width: 930px) {
+	
+	.scaleMoon{
+		transform: scale(1.2);
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.button{
+		height: 40px;
+		width: 220px;
+		border-radius: 20px;
+		font-size: 25px;
+		text-align: center;
+		left: calc(50% - 110px);
+		background-color: #AEC6CF;
+		position: relative;
+		top: -22px;
+		font-family: ode, sans-serif;
+		border: 0px;
+	}
+	
 	.partContainer{
 		width: 300px;
 		position: relative;
@@ -198,6 +272,24 @@ table {
 		margin: auto;
 	}
 	
+	.slider::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%;
+	  background: #AEC6CF;
+	  cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%;
+	  background: #AEC6CF;
+	  cursor: pointer;
+	}
+	
 	body{
 		font-family: ode, sans-serif;
 		font-weight: 400;
@@ -208,7 +300,7 @@ table {
 	.rightBox{
 		height: 360px;
 		width: 300px;
-		background-color: #681010;
+		background-color: #D4F0F7;
 		display: fixed;
 		border-radius: 15px;
 		right: 0px;
@@ -229,7 +321,7 @@ table {
 	.topBox{
 		height: 70px;
 		width: 300px;
-		background-color: #4C0909;
+		background-color: #b6e1ec;
 		display: fixed;
 		border-radius: 15px;
 		font-size: 10px;
@@ -239,12 +331,12 @@ table {
 	}
 	
 	.shadow{
-		text-shadow: 1px 1px 0 #ffd000, 
-		  2px 2px 0 #ffd000,
-		  3px 3px #ffd000, 
-		  4px 4px 0 #ffd000,
-		  5px 5px 0 #ffd000;
-		color: #ff9400;
+		text-shadow: 1px 1px 0 #a4c3e5, 
+		  2px 2px 0 #a4c3e5,
+		  3px 3px #a4c3e5, 
+		  4px 4px 0 #a4c3e5,
+		  5px 5px 0 #a4c3e5;
+		color: #1C4168;
 		letter-spacing: 0.08rem;
 		font-size: 45px;
 		position: relative;
@@ -261,7 +353,7 @@ table {
 	.dot{
 		height: 230px;
 		width: 230px;
-		background-color: #9C2F2F;
+		background-color: #D4F0F7;
 		display: inline-block;
 		border-radius: 50%;
 		position: relative;
@@ -295,4 +387,200 @@ table {
 		padding-right: 6px;
 		font-size: 21px;
 	}
+}
+
+
+
+
+
+/*Moon Stuff*/
+
+
+
+
+
+.moon {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  -webkit-clip-path: circle(50px at center);
+  clip-path: circle(50px, 50px, 50px);
+  clip-path: circle(49px at center);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: var(--base);
+  overflow: hidden;
+  transform: scale(2);
+}
+
+.moon:before, .moon:after {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -4%;
+  left: -4%;
+  height: 108%;
+  width: 108%;
+}
+.moon:before {
+  background: #1C4168;
+  -moz-box-shadow: inset -10px 0 7px 0px var(--base);
+  -webkit-box-shadow: inset -10px 0 7px 0px var(--base);
+  box-shadow: inset -10px 0 7px 0px var(--base);
+}
+.moon:after {
+  background: var(--base);
+  -moz-box-shadow: inset -10px 0 7px 0px var(--base);
+  -webkit-box-shadow: inset -10px 0 7px 0px var(--base);
+  box-shadow: inset -10px 0 7px 0px var(--base);
+}
+
+/* Animation */
+@keyframes before-fullmoon {
+	
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+  0%, 24.99% {
+    background: #1C4168;
+  }
+  25%, 100% {
+    background: var(--base);
+  }
+  0% {
+    -moz-box-shadow: inset 0px 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 0px 0 7px 0px var(--base);
+    box-shadow: inset 0px 0 7px 0px var(--base);
+  }
+  24.99% {
+    -moz-box-shadow: inset 55px 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 55px 0 7px 0px var(--base);
+    box-shadow: inset 55px 0 7px 0px var(--base);
+  }
+  25% {
+    -moz-box-shadow: inset 55px 0 7px 0px #1C4168;
+    -webkit-box-shadow: inset 55px 0 7px 0px #1C4168;
+    box-shadow: inset 55px 0 7px 0px #1C4168;
+  }
+  50%, 100% {
+    -moz-box-shadow: inset 0 0 7px 0px #1C4168;
+    -webkit-box-shadow: inset 0 0 7px 0px #1C4168;
+    box-shadow: inset 0 0 7px 0px #1C4168;
+  }
+  0%, 50%, 100% {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  20%, 30% {
+    -moz-border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+    -webkit-border-radius: 10%;
+    border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+  }
+  25% {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  0%, 24.99% {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  25%, 50%, 100% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes after-fullmoon {
+  0%, 50% {
+    opacity: 0;
+  }
+  50.01%, 100% {
+    opacity: 1;
+  }
+  0%, 50%, 74.99% {
+    background: var(--base);
+  }
+  75%, 100% {
+    background: #1C4168;
+  }
+  0%, 50% {
+    -moz-box-shadow: inset 0px 0 7px 0px #1C4168;
+    -webkit-box-shadow: inset 0px 0 7px 0px #1C4168;
+    box-shadow: inset 0px 0 7px 0px #1C4168;
+  }
+  74.99% {
+    -moz-box-shadow: inset 55px 0 7px 0px #1C4168;
+    -webkit-box-shadow: inset 55px 0 7px 0px #1C4168;
+    box-shadow: inset 55px 0 7px 0px #1C4168;
+  }
+  75% {
+    -moz-box-shadow: inset 55px 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 55px 0 7px 0px var(--base);
+    box-shadow: inset 55px 0 7px 0px var(--base);
+  }
+  100% {
+    -moz-box-shadow: inset 0 0 7px 0px var(--base);
+    -webkit-box-shadow: inset 0 0 7px 0px var(--base);
+    box-shadow: inset 0 0 7px 0px var(--base);
+  }
+  0%, 50%, 100% {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  70%, 80% {
+    -moz-border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+    -webkit-border-radius: 10%;
+    border-radius: 10% 10% 10% 10%/50% 50% 50% 50%;
+  }
+  75% {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  0%, 50%, 74.99% {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  75%, 100% {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.moon:before {
+  -moz-animation: before-fullmoon linear 100s infinite;
+  -webkit-animation: before-fullmoon linear 100s infinite;
+  animation: before-fullmoon linear 100s infinite;
+	  -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+	  animation-delay: var(--phase);
+}
+
+.moon:after {
+  -moz-animation: after-fullmoon linear 100s infinite;
+  -webkit-animation: after-fullmoon linear 100s infinite;
+  animation: after-fullmoon linear 100s infinite;
+  -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-delay: var(--phase);
 }

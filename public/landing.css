@@ -6,6 +6,7 @@ body{
 	font-weight: 400;
 	font-style: normal;
 	font-size: 40px;
+	background-color: #1F456E;
 }
 
 h1{
@@ -24,21 +25,21 @@ h1{
 	border-radius: 25px;
 	font-size: 35px;
 	text-align: center;
-	background-color: #9C2F2F;
+	background-color: #AEC6CF;
 	position: absolute;
 	bottom: 120px;
 }
 
 input[type=submit]{
 	width: 90%;
-	border: 0px solid #000000;
+	border: 0px solid #1F456E;
 	border-radius: 25px;
 	position: relative;
 	margin: auto;
 	left: 5%;
 	height: 50px;
-	text-decoration-color: #000000;
-	background-color: #9C2F2F;
+	text-decoration-color: #1F456E;
+	background-color: #AEC6CF;
 	font-family: ode, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -76,15 +77,15 @@ input[type=text]{
     width: 90%;
 	padding: 12px 10px;
 	display: inline-block;
-	border: 1px solid #000000;
+	border: 1px solid #1F456E;
 	border-radius: 4px;
 	padding-left: 14px;
 	box-sizing: border-box;
 	position: relative;
 	margin: auto;
 	left: 5%;
-	text-decoration-color: #000000;
-	background-color: #9C2F2F;
+	text-decoration-color: #1F456E;
+	background-color: #AEC6CF;
 	font-family: ode, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -99,18 +100,14 @@ input[type=text]{
 }
 
 .shadow{
-	text-shadow: 1px 1px 0 #ffd000, 
-	  2px 2px 0 #ffd000,
-	  3px 3px #ffd000, 
-	  4px 4px 0 #ffd000,
-	  5px 5px 0 #ffd000,
-	  6px 6px #ffd000,
-	  7px 7px 0 #ffd000,
-	  8px 8px #ffd000, 
-	  9px 9px 0 #ffd000,
-	  10px 10px 0 #ffd000,
-	  11px 11px #ffd000;
-	color: #ff9400;
+	text-shadow: 1px 1px 0 #a4c3e5, 
+	  2px 2px 0 #a4c3e5,
+	  3px 3px #a4c3e5, 
+	  4px 4px 0 #a4c3e5,
+	  5px 5px 0 #a4c3e5,
+	  6px 6px #a4c3e5,
+	  7px 7px #a4c3e5;	
+	color: #1F456E;
 	letter-spacing: 0.4rem;
 	font-size: 100px;
 }
@@ -125,7 +122,7 @@ input[type=text]{
 .dot{
 	height: 380px;
 	width: 380px;
-	background-color: #9C2F2F;
+  	background-image: linear-gradient(#F61E61 , #D0D5F7);
 	display: inline-block;
 	border-radius: 50%;
 	top: 40px;
@@ -135,7 +132,7 @@ input[type=text]{
 .rightBox{
 	height: 480px;
 	width: 450px;
-	background-color: #681010;
+	background-color: #D4F0F7;
 	display: fixed;
 	border-radius: 25px;
 	right: 0px;
@@ -150,7 +147,7 @@ input[type=text]{
 .topBox{
 	height: 120px;
 	width: 680px;
-	background-color: #681010;
+	background-color: #D4F0F7;
 	display: fixed;
 	border-radius: 25px;
 	font-size: 15px;
@@ -206,7 +203,7 @@ input[type=text]{
 	.dot{
 		height: 230px;
 		width: 230px;
-		background-color: #9C2F2F;
+		background-color: #AEC6CF;
 		display: inline-block;
 		border-radius: 50%;
 		position: relative;
@@ -217,7 +214,7 @@ input[type=text]{
 	.rightBox{
 		height: 360px;
 		width: 300px;
-		background-color: #681010;
+		background-color: #D4F0F7;
 		display: fixed;
 		border-radius: 15px;
 		right: 0px;
@@ -238,7 +235,7 @@ input[type=text]{
 	.topBox{
 		height: 70px;
 		width: 300px;
-		background-color: #4C0909;
+		background-color: #D4F0F7;
 		display: fixed;
 		border-radius: 15px;
 		font-size: 10px;
@@ -248,12 +245,12 @@ input[type=text]{
 	}
 	
 	.shadow{
-		text-shadow: 1px 1px 0 #ffd000, 
-		  2px 2px 0 #ffd000,
-		  3px 3px #ffd000, 
-		  4px 4px 0 #ffd000,
-		  5px 5px 0 #ffd000;
-		color: #ff9400;
+		text-shadow: 1px 1px 0 #a4c3e5, 
+		  2px 2px 0 #a4c3e5,
+		  3px 3px #a4c3e5, 
+		  4px 4px 0 #a4c3e5,
+		  5px 5px 0 #a4c3e5;
+		color: #1F456E;
 		letter-spacing: 0.08rem;
 		font-size: 45px;
 		position: relative;
@@ -273,14 +270,14 @@ input[type=text]{
 	
 	input[type=submit]{
 		width: 90%;
-		border: 0px solid #000000;
+		border: 0px solid #1F456E;
 		border-radius: 25px;
 		position: relative;
 		margin: auto;
 		left: 5%;
 		height: 50px;
-		text-decoration-color: #000000;
-		background-color: #9C2F2F;
+		text-decoration-color: #1F456E;
+		background-color: #AEC6CF;
 		font-family: ode, sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -294,7 +291,7 @@ input[type=text]{
 		border-radius: 25px;
 		font-size: 30px;
 		text-align: center;
-		background-color: #9C2F2F;
+		background-color: #AEC6CF;
 		position: absolute;
 		bottom: 120px;
 	}
