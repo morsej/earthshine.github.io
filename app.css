@@ -6,6 +6,8 @@
   --base: #E274DB;
 }
 
+
+
 body{
 	font-family: ode, sans-serif;
 	font-weight: 400;
@@ -415,7 +417,6 @@ input[type=color]{
   transform: scale(2);
 }
 
-
 .moon:before, .moon:after {
   border-radius: 50%;
   content: "";
@@ -501,6 +502,7 @@ input[type=color]{
     transform: rotate(180deg);
   }
 }
+
 @keyframes after-fullmoon {
   0%, 50% {
     opacity: 0;

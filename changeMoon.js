@@ -6,7 +6,7 @@
       inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
       function handleUpdate(e) {
-		var moon = document.getElementById('moon');
+		var moon = document.getElementById('adjustMoon');
         // append 'px' to the end of spacing and blur variables
 		var amount = this.value;
 		if(amount > 50 && this.id != 'base'){
