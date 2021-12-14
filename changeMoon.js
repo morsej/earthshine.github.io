@@ -20,4 +20,4 @@
 		const negValue = (this.id === 'base' ? amount : amount * -1);
         const suffix = (this.id === 'base' ? '' : 's');
         document.documentElement.style.setProperty(`--${this.id}`, negValue + suffix);
-      }
+}
