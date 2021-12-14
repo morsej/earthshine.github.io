@@ -13,6 +13,7 @@
 		function onload(){
 			handleUpdate();
 			getTemp();
+			funFact();
 		}
 		
 		//layout taken from get_weather_ajax from class
@@ -71,7 +72,7 @@
    </script>
 </head>
 	
-<body onload= "onload()" onload = "calcRandom()">
+<body onload= "onload()" >
 	
 	<div class="partContainer">
 		<div class="dotbox">
@@ -174,9 +175,9 @@
 				</table>
 			</div> 
 			
-			<div class="api" id = "api">	
+			 <div class="api" id = "api">	
 				api fun fact!
-			</div>
+			</div> 
 			<div class = "moonfact" id = "moonfact">
 				Moon fact!
 			</div>
@@ -190,27 +191,31 @@
 		</div>
 	</div>
 	<br>
-	<script>
-		function calcRandom(){
-			var random = Math.floor(Math.random() * 3); //ADJUST LATER TO 24 
-		}
-		calcRandom();
-		var found = "";
-		
-		var facts =
-			["The Moon is Earth's only natural satellite.", 
-			  "The Moon's presence helps stabilize our planet's wobble and moderate our climate.",
-			  "The Moon’s distance from Earth is about 240,000 miles (385,000km).",
-			  "The Moon has a very thin atmosphere called an exosphere."
-			];
-			for (i=0; i<facts.length; i++){
-				console.log(facts[i]);
-            	if (i == random) {
-            	    found = items[i];
-            	}	
-       		}
-		document.getElementById("moonfact").innerHTML = found;
+	<script language = "javascript">
+		function funFact() {
 
+		
+			
+			var random = Math.floor(Math.random() * 3); //ADJUST LATER TO 24 
+			
+			
+			var found = "";
+			
+			var facts =
+				["The Moon is Earth's only natural satellite.", 
+				"The Moon's presence helps stabilize our planet's wobble and moderate our climate.",
+				"The Moon’s distance from Earth is about 240,000 miles (385,000km).",
+				"The Moon has a very thin atmosphere called an exosphere."
+				];
+			for (i = 0; i<facts.length; i++){
+				console.log(facts[i]);
+				if (i == random) {
+					found = facts[i];
+					console.log("FOUND:" + found);
+				}	
+			}
+			document.getElementById("moonfact").innerHTML = found;
+		}
 	</script>
 </body>
 </html>
