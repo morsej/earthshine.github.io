@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family: ode, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+}
+
+h1{
+	font-size: 15px;
+	font-family: manofa, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	position: relative;
+	top: -100px;
+	left: 10px;
+}
+
+/* .button{
+	height: 50px;
+	width: 170px;
+	border-radius: 25px;
+	font-size: 35px;
+	text-align: center;
+	background-color: #9C2F2F;
+	position: absolute;
+	bottom: 120px;
+} */
+
+.shadow{
+	text-shadow: 1px 1px 0 #ffd000, 
+	  2px 2px 0 #ffd000,
+	  3px 3px 0 #ffd000, 
+	  4px 4px 0 #ffd000,
+	  5px 5px 0 #ffd000,
+	  6px 6px 0 #ffd000;
+	color: #ff9400;
+	letter-spacing: 0.4rem;
+	font-size: 60px;
+	position: relative;
+	top: -58px;
+	left: 18px;
+}
+
+.partContainer{
+	margin: auto;
+	width: 900px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.dot{
+	height: 380px;
+	width: 380px;
+	background-color: #9C2F2F;
+	display: inline-block;
+	border-radius: 50%;
+	top: 20px;
+	position: relative;
+}
+
+.smalldot{
+	height: 27px;
+	width: 27px;
+	background-color: #9C2F2F;
+	display: inline-block;
+	border-radius: 50%;
+	position: relative;
+}
+
+
+td, th {
+    border: 2px solid #4C0909;
+    text-align: left;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size: 38px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.rightBox{
+	height: 580px;
+	width: 450px;
+	background-color: #681010;
+	display: fixed;
+	border-radius: 25px;
+	right: 0px;
+	position: absolute;
+	top: 20px;
+}
+
+.box{
+	height: 450px;
+	overflow: scroll;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.api,.moonfact{
+	color: #959595;
+	font-size: 26px;
+	padding-top: 4px;
+	width: 100%;
+	text-align: center;
+}
+
+.spacing{
+	height: 84px;
+}
+
+.topBox{
+	height: 80px;
+	width: 450px;
+	background-color: #4C0909;
+	display: fixed;
+	border-radius: 25px;
+	font-size: 15px;
+	right: 0px;
+	top: 20px;
+	position: absolute;
+}
+
+.dotbox{
+	width: 380px;
+	position: absolute;
+	margin: auto;
+	left: 0px;
+}
+
+.slidecontainer {
+    width: 320px;
+	margin: auto;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #9C2F2F;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #9C2F2F;
+  cursor: pointer;
+}
+
+.button{
+	height: 40px;
+	width: 220px;
+	border-radius: 25px;
+	font-size: 30px;
+	text-align: center;
+	margin: auto;
+	background-color: #9C2F2F;
+	position: relative;
+	top: -22px;
+	font-family: ode, sans-serif;
+}
+
+@media only screen and (max-width: 930px) {
+	.partContainer{
+		width: 300px;
+		position: relative;
+		margin: auto;
+	}
+
+	
+	.slidecontainer {
+		width: 230px;
+		margin: auto;
+	}
+	
+	body{
+		font-family: ode, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 30px;
+	}
+
+	.rightBox{
+		height: 360px;
+		width: 300px;
+		background-color: #681010;
+		display: fixed;
+		border-radius: 15px;
+		right: 0px;
+		position: relative;
+		top: 20px;
+	}
+
+	.spacing{
+		height: 70px;
+	}
+	
+	.blurb{
+		position: absolute;
+		top: 50px;
+		margin: 20px;
+	}
+	
+	.topBox{
+		height: 70px;
+		width: 300px;
+		background-color: #4C0909;
+		display: fixed;
+		border-radius: 15px;
+		font-size: 10px;
+		right: 0px;
+		top: -370px;
+		position: relative;
+	}
+	
+	.shadow{
+		text-shadow: 1px 1px 0 #ffd000, 
+		  2px 2px 0 #ffd000,
+		  3px 3px #ffd000, 
+		  4px 4px 0 #ffd000,
+		  5px 5px 0 #ffd000;
+		color: #ff9400;
+		letter-spacing: 0.08rem;
+		font-size: 45px;
+		position: relative;
+		top: -9px;
+		left: 10px;
+	}
+	
+	.dotbox{
+		width: 230px;
+		position: relative;
+		margin: auto;
+	}
+	
+	.dot{
+		height: 230px;
+		width: 230px;
+		background-color: #9C2F2F;
+		display: inline-block;
+		border-radius: 50%;
+		position: relative;
+		margin: auto;
+		top: 1px;
+	}
+	
+	.spacing{
+		height: 76px;
+	}
+	
+	.box{
+		height: 246px;
+		overflow: scroll;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.api{
+		color: #959595;
+		font-size: 21px;
+		padding-top: 2px;
+		width: 100%;
+		text-align: center;
+	}
+	
+	td, th {
+		border: 2px solid #4C0909;
+		text-align: left;
+		padding-left: 6px;
+		padding-right: 6px;
+		font-size: 21px;
+	}
+}

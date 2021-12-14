@@ -46,12 +46,18 @@
 		<div class="dotbox">
 			<span class="dot"></span>
 			
-			<div class="slidecontainer">
-				<input type="range" min="1" max="100" value="50" class="slider" id="phase">
-				<input type="range" min="1" max="100" value="50" class="slider" id="color">
-				<input type="range" min="1" max="100" value="50" class="slider" id="clouds">
+			<div class="slidecontainer" >
+				<form method = "post" action = "/">
+				<input type="range" min="1" max="100" value="50" class="slider" id="phase" name ="phase">
+				<input type="range" min="1" max="100" value="50" class="slider" id="color" name ="color">
+				<input type="range" min="1" max="100" value="50" class="slider" id="clouds" name ="clouds">
+				<input type = "text" name = "date" placeholder= "January 1, 2021">
+				<input type = "text" name = "time" placeholder= "1:00AM">
 				<br><br>
-				<div class="button" id="signUpButton">log this moon</div>
+				<button name = "btnlog" class="button" id="signUpButton">log this moon</button>
+				
+				<!-- <div class="button" id="signUpButton">log this moon</div> -->
+			</form>
 			</div>
 		</div>
 		
@@ -59,7 +65,7 @@
 			<div class="spacing"></div>
 			<div class="box">
 				
-				<table>
+				 <table>
 					<colgroup>
 						<col span="1" style="width: 40px;">
 					    <col span="1" style="width: calc(75% - 40px);">

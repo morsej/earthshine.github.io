@@ -1,36 +1,41 @@
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const { Schema } = mongoose;
+var path = require('path');
 
-const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb+srv://rileynpeterson:shxh4SHh6WNCgU!@moonfacts.zjgm6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";  // connection string goes here
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname, 'public')));
+mongoose.connect("mongodb+srv://rileynpeterson:shxh4SHh6WNCgU!@log.9yar0.mongodb.net/calendar_log", { useNewURLParser: true, useUnifiedTopology: true}, () => console.log(" Mongoose is connected"));
 
-var fs = require('fs');
-
-function main() 
-{
-  MongoClient.connect(url, function(err, db) {
-  if(err) { return console.log(err); }
-  
-    var dbo = db.db("assignment14");
-	var collection = dbo.collection('companies');
-	
-	//var newData = {"Company": "Apple Inc.", "Ticker": "APPLE"};
-    file='companies.csv';
-    var array = fs.readFileSync(file).toString().split("\n"); 
-
-    var company;
-    var ticker;
-    for (i = 1; i < array.length - 1 ; i++){
-        //console.log(array[i]);
-        company = array[i].split(",")[0];
-        ticker = array[i].split(",")[1];
-        collection.insertOne({"company" : company , "ticker": ticker}, function(err, res) {
-            if(err) { console.log("query err: " + err); return; }
-            console.log("new document inserted");
-            }  );
-    }
-
-	console.log("Success!");
- 
-});
+//create a data schema
+const logSchema = {
+    date: String,
+    time: String,
+    clouds: Number,
+    color: Number,
+    phase: Number
 }
 
-main();
+const Log = mongoose.model("entries", logSchema);
+
+app.get("/", function(req, res){
+    res.sendFile(__dirname + "/app.html");
+});
+
+app.post("/", function(req, res){
+    let newLog = new Log ({
+        date: req.body.date,
+        time: req.body.time,
+        clouds: req.body.clouds,
+        color: req.body.color,
+        phase: req.body.phase
+    })
+    newLog.save();
+    res.redirect('/');
+});
+
+app.listen(8080, function(){
+    console.log("server is running on 8080");
+});
