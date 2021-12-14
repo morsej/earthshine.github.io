@@ -13,8 +13,8 @@ mongoose.connect("mongodb+srv://rileynpeterson:shxh4SHh6WNCgU!@log.9yar0.mongodb
 const logSchema = {
     date: String,
     time: String,
-    clouds: Number,
-    color: Number,
+    //clouds: Number,
+    color: String,
     phase: Number
 }
 
@@ -28,7 +28,7 @@ app.post("/", function(req, res){
     let newLog = new Log ({
         date: req.body.date,
         time: req.body.time,
-        clouds: req.body.clouds,
+        //clouds: req.body.clouds,
         color: req.body.color,
         phase: req.body.phase
     })
