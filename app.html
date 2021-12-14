@@ -7,9 +7,40 @@
 	<link rel="stylesheet" href="https://use.typekit.net/vos4vji.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script>
+		//layout taken from get_weather_ajax from class
+	   function getTemp() {
+		   /* Step 1: Make instance of request object...
+		   ...to make HTTP request after page is loaded*/
+		   request = new XMLHttpRequest();
+		   
+		   request.open('GET', 'https://goweather.herokuapp.com/weather/Boston', true);
+		   // Step 2: set up event handler/callback
+		   request.onreadystatechange = function(){
+			   if (request.readyState == 4){
+				   if (request.status == 200){
+					   weather = JSON.parse(request.responseText);
+					   today = weather['temperature'];
+			   
+					   document.getElementById("api").innerHTML = "Today's Weather: " + today;
+					   
+				   } else {
+					   console.log("Status error: " + request.status);
+				   }
+			   } else {
+				   console.log("Ignored readyState: " + request.readyState);
+			   }
+		   }
+
+		   
+		   request.send();
+	   }
+	   
+   </script>
 </head>
 	
-<body>
+<body onload= "getTemp()">
 	
 	<div class="partContainer">
 		<div class="dotbox">
@@ -100,7 +131,7 @@
 				</table>
 			</div>
 			
-			<div class="api">
+			<div class="api" id = "api">	
 				api fun fact!
 			</div>
 		</div>
