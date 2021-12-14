@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
+:root {
+  --phase: 10s;
+  --base: #E274DB;
+}
+
 body{
 	font-family: ode, sans-serif;
 	font-weight: 400;
