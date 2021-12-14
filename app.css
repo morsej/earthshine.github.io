@@ -6,8 +6,6 @@
   --base: #E274DB;
 }
 
-
-
 body{
 	font-family: ode, sans-serif;
 	font-weight: 400;
@@ -77,11 +75,11 @@ h1{
 .smalldot{
 	height: 27px;
 	width: 27px;
+	top: 2px;
 	background-image: linear-gradient(#F61E61 , #D0D5F7);
 	display: inline-block;
 	border-radius: 50%;
 	position: relative;
-	top: 2px;
 }
 
 
@@ -110,7 +108,7 @@ table {
 }
 
 .box{
-	height: 450px;
+	height: 420px;
 	overflow: scroll;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -367,7 +365,7 @@ input[type=color]{
 	}
 	
 	.box{
-		height: 246px;
+		height: 216px;
 		overflow: scroll;
 		padding-left: 20px;
 		padding-right: 20px;
