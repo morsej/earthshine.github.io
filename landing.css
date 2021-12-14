@@ -6,6 +6,7 @@ body{
 	font-weight: 400;
 	font-style: normal;
 	font-size: 40px;
+	background-color: #1F456E;
 }
 
 h1{
@@ -177,7 +178,7 @@ input[type=text]{
 	}
 	
 	.swap{
-		color: #AEC6CF;
+		color: #D4F0F7;
 		font-size: 15px;
 		margin: auto;
 		text-align: center;
@@ -213,7 +214,7 @@ input[type=text]{
 	.rightBox{
 		height: 360px;
 		width: 300px;
-		background-color: #AEC6CF;
+		background-color: #D4F0F7;
 		display: fixed;
 		border-radius: 15px;
 		right: 0px;
@@ -234,7 +235,7 @@ input[type=text]{
 	.topBox{
 		height: 70px;
 		width: 300px;
-		background-color: #AEC6CF;
+		background-color: #D4F0F7;
 		display: fixed;
 		border-radius: 15px;
 		font-size: 10px;
@@ -244,12 +245,12 @@ input[type=text]{
 	}
 	
 	.shadow{
-		text-shadow: 1px 1px 0 #ffd000, 
-		  2px 2px 0 #ffd000,
-		  3px 3px #ffd000, 
-		  4px 4px 0 #ffd000,
-		  5px 5px 0 #ffd000;
-		color: #ff9400;
+		text-shadow: 1px 1px 0 #a4c3e5, 
+		  2px 2px 0 #a4c3e5,
+		  3px 3px #a4c3e5, 
+		  4px 4px 0 #a4c3e5,
+		  5px 5px 0 #a4c3e5;
+		color: #1F456E;
 		letter-spacing: 0.08rem;
 		font-size: 45px;
 		position: relative;
@@ -257,6 +258,7 @@ input[type=text]{
 	}
 	
 	.swap2{
+		D4F0F7
 		color: #725B5B;
 		font-size: 15px;
 		margin: auto;
