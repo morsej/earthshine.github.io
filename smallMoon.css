@@ -14,7 +14,6 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: var(--smallBase);
   overflow: hidden;
   transform: scale(.3);
 }
@@ -184,5 +183,5 @@
   -webkit-animation-play-state: paused;
       -moz-animation-play-state: paused;
       -o-animation-play-state: paused;
-      animation-delay: var(--smallPhase);
+      animation-delay: var(--smalPphase);
 }

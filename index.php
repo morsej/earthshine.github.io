@@ -1,4 +1,4 @@
-<?php      
+<?php     
     include('connection.php');  
 
 	if(isset($_POST['but_submit'])){
@@ -18,15 +18,35 @@
 			$count = mysqli_num_rows($result);  
 
 			if($count == 1){  
-				session_start();
 				$_SESSION['user'] = $username;
 				header('Location: app.php');
 			}  
-
-			else{  
-				echo "<h1> Login failed. Invalid username or password.</h1>";  
-			}     
 		}
+
+		if(isset($_POST['signUpGo'])){
+
+				$newUsername = $_POST['newUsername'];  
+				$newPassword = $_POST['newPassword'];  
+
+					//to prevent from mysqli injection  
+					$newUsername = stripcslashes($newUsername);  
+					$newPassword = stripcslashes($newPassword);  
+					$newUsername = mysqli_real_escape_string($conn, $newUsername);
+					$newPassword = mysqli_real_escape_string($conn, $newPassword);   
+					
+					$sql = "select *from users where user = '$newUsername'";  
+					$result = mysqli_query($conn, $sql);  
+					$row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+					$count = mysqli_num_rows($result);  
+					echo $count;
+
+					if($count == 0){  
+						$sql = "INSERT INTO users (`user`, `pass`, `tableString`) VALUES ('$newUsername', '$newPassword', '')"; 
+						mysqli_query($conn, $sql);
+						$_SESSION['user'] = $newUsername;
+						header('Location: app.php');
+					}  
+				}
 ?>  
 
 <!doctype html>
@@ -35,6 +55,7 @@
 <meta charset="UTF-8">
 <title>Earthshine: a Moon Journal App</title>
 <link href="landing.css" rel="stylesheet" type="text/css">
+<link href="starSky.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.typekit.net/vos4vji.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,6 +97,10 @@
 	
 	
 <body>
+	<div class="container">
+		<div class="stars"></div>
+		<div class="stars1"></div>
+		<div class="stars2"></div>
 	
 	<div class="partContainer">
 		<span class="dot">
@@ -93,14 +118,14 @@
 			
 			<div class="signIn" id="signIn" style="visibility: hidden;">
 				<div class="spacing"></div>
-				    <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+				    <form name="f1" onsubmit = "return validation()" method = "POST">  
 					<label for="username">Username</label>
 					<input type="text" id="user" name="user" placeholder="enter your username">
 
 					<label for="password">Password</label>
-					<input type="text" id="pass" name="pass" placeholder="enter your password">
+					<input type="password" id="pass" name="pass" placeholder="enter your password">
 
-					<input type="submit" id = "btn" value="Login">
+					<input type="submit" name="but_submit" id="but_submit" value="log in">
   				</form>
 				<div class="swap" id="goToSU">
 					dont have an account?<br>
@@ -109,7 +134,7 @@
 			</div>
 			
 			
-			    <script>  
+			<script>  
             function validation()  
             {  
                 var id=document.f1.user.value;  
@@ -134,14 +159,14 @@
 			
 			
 			<div class="signUp" id="signUp" style="visibility: hidden;">
-				<form action="/action_page.php">
+				<form name="f2" onsubmit = "return signValidation()" method = "POST">
 					<label for="newUsername">Username</label>
 					<input type="text" id="newUsername" name="newUsername" placeholder="choose your username">
 
 					<label for="newPassword">Password</label>
-					<input type="text" id="newPassword" name="newPassword" placeholder="choose your password">
+					<input type="password" id="newPassword" name="newPassword" placeholder="choose your password">
 
-					<input type="submit" value="sign up">
+					<input type="submit" name="signUpGo" id="signUpGo" value="sign up">
   				</form>
 				<div class="swap2" id="goToSI">
 					already have an account?<br>
@@ -149,11 +174,35 @@
 				</div>
 			</div>
 			
+			<script>  
+            function signValidation()  
+            {  
+                var id=document.f2.newUsername.value;  
+                var ps=document.f2.newPassword.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+			
 		</div>
 		<div class="topBox" id="head">
 			<h1 class="shadow">Earthshine</h1>
 		</div>
 	</div>
 	<br>
+	</div>
 </body>
 </html>
