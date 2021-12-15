@@ -107,10 +107,10 @@
 				"Shadows on the moon are darker than on Earth."
 			]
 
-			for (i=0; i<items.length; i++){
+			for (i=0; i<moonfacts.length; i++){
 				//console.log(i + " : " + items[i-1]._id + " fact: " + items[i-1].fact);
 				if (i == random) {
-					found = items[i];
+					found = moonfacts[i];
 				}	
 			}	
 
