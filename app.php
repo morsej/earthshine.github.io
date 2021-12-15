@@ -93,14 +93,14 @@
 			var found = "";
 			moonfacts = [
 				"The Moon is Earth's only natural satellite.",
-				"The Moon's distance from Earth is about 240,000 miles (385,000km).",
+				"The Moon's distance from Earth is about 240,000 miles.",
 				"The Moon has a very thin atmosphere called an exosphere.",
-				"Twenty-four humans have traveled from the Earth to the Moon.",
+				"24 humans have traveled from the Earth to the Moon.",
 				"The Moon always shows Earth the same face.",
 				"In 1969, Apollo 11 landed the first astronauts on the moon.",
 				"Our moon is bigger than Pluto.",
-				"The Moon has only been walked on by 12 people; all American men.",
-				"It would take around 400,000 moons to match the brightness of the sun.",
+				"The Moon has only been walked on by 12 people.",
+				"The Sun is 400,000 times brighter than the moon",
 				"The moon is about 32 Earths away from us.",
 				"Earth's moon is the fifth-largest in our solar system.",
 				"The dark spots on the moon are called 'Maria.'",
