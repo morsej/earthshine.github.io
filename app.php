@@ -61,6 +61,7 @@
 	<script>
 		//layout taken from get_weather_ajax from class
 	   function getTemp() {
+		   moonfacts();
 		   /* Step 1: Make instance of request object...
 		   ...to make HTTP request after page is loaded*/
 		   request = new XMLHttpRequest();
@@ -84,6 +85,36 @@
 		   }
 		   
 		   request.send();
+	   }
+
+	   function moonfacts(){
+
+			var random = Math.floor(Math.random() * 12);
+			var found = "";
+			moonfacts = [
+				"The Moon is Earth's only natural satellite.",
+				"The Moon's distance from Earth is about 240,000 miles (385,000km).",
+				"The Moon has a very thin atmosphere called an exosphere.",
+				"Twenty-four humans have traveled from the Earth to the Moon.",
+				"The Moon always shows Earth the same face.",
+				"In 1969, Apollo 11 landed the first astronauts on the moon.",
+				"Our moon is bigger than Pluto.",
+				"The Moon has only been walked on by 12 people; all American men.",
+				"It would take around 400,000 moons to match the brightness of the sun.",
+				"The moon is about 32 Earths away from us.",
+				"Earth's moon is the fifth-largest in our solar system.",
+				"The dark spots on the moon are called 'Maria.'",
+				"Shadows on the moon are darker than on Earth."
+			]
+
+			for (i=0; i<items.length; i++){
+				//console.log(i + " : " + items[i-1]._id + " fact: " + items[i-1].fact);
+				if (i == random) {
+					found = items[i];
+				}	
+			}	
+
+			document.getElementById("moonfact").innerHTML = found;
 	   }
 	   
    </script>
@@ -165,11 +196,11 @@
 			<div class="api" id = "api">	
 				api fun fact!
 			</div>
-			<!---
+			
 			<div class = "moonfact" id = "moonfact">
 				Moon fact!
 			</div>
-			--->
+			
 			
 		</div>
 		
