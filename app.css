@@ -108,7 +108,7 @@ table {
 }
 
 .box{
-	height: 420px;
+	height: 422px;
 	overflow: scroll;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -403,13 +403,13 @@ input[type=time]{
 	}
 	
 	.box{
-		height: 236px;
+		height: 216px;
 		overflow: scroll;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 
-	.api{
+	.api, .moonfact{
 		color: #959595;
 		font-size: 21px;
 		padding-top: 2px;
@@ -987,7 +987,7 @@ input[type=color]{
 	}
 	
 	.box{
-		height: 256px;
+		height: 236px;
 		overflow: scroll;
 		padding-left: 20px;
 		padding-right: 20px;
