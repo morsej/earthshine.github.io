@@ -97,12 +97,12 @@
 				"The Moon has a very thin atmosphere called an exosphere.",
 				"24 humans have traveled from the Earth to the Moon.",
 				"The Moon always shows Earth the same face.",
-				"In 1969, Apollo 11 landed the first astronauts on the moon.",
+				"In 1969, the first astronauts landed on the moon.",
 				"Our moon is bigger than Pluto.",
 				"The Moon has only been walked on by 12 people.",
-				"The Sun is 400,000 times brighter than the moon",
+				"The Sun is 400,000 times brighter than the moon.",
 				"The moon is about 32 Earths away from us.",
-				"Earth's moon is the fifth-largest in our solar system.",
+				"Earth's moon is the 5th largest in our solar system.",
 				"The dark spots on the moon are called 'Maria.'",
 				"Shadows on the moon are darker than on Earth."
 			]
