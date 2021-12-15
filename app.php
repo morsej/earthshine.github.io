@@ -94,7 +94,7 @@
 			moonfacts = [
 				"The Moon is Earth's only natural satellite.",
 				"The Moon's distance from Earth is about 240,000 miles.",
-				"The Moon has a very thin atmosphere called an exosphere.",
+				"The Moon has an exosphere; a very thin atmososphere.",
 				"24 humans have traveled from the Earth to the Moon.",
 				"The Moon always shows Earth the same face.",
 				"In 1969, the first astronauts landed on the moon.",
@@ -193,13 +193,15 @@
 				</form>
 			</div>
 			
+			<div class = "moonfact" id = "moonfact">
+				Moon fact!
+			</div>
+			
 			<div class="api" id = "api">	
 				api fun fact!
 			</div>
 			
-			<div class = "moonfact" id = "moonfact">
-				Moon fact!
-			</div>
+			
 			
 			
 		</div>
